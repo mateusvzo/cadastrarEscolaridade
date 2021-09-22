@@ -103,7 +103,7 @@ export default function Home() {
             <DataTable.Title>
               <Text style={styles.title}>Escolaridade</Text>
             </DataTable.Title>
-            <DataTable.Title>
+            <DataTable.Title style={{marginLeft: 12}}>
               <Text style={styles.title}>Excluir</Text>
             </DataTable.Title>
           </DataTable.Header>
@@ -118,7 +118,7 @@ export default function Home() {
                     <DataTable.Cell>{item.id}</DataTable.Cell>
                     <DataTable.Cell>{item.escolaridade}</DataTable.Cell>
                     <DataTable.Cell>
-                      <ButtonList onPress={() => handleRemoveCadastro(item.id)}>
+                      <ButtonList  onPress={() => handleRemoveCadastro(item.id)}>
                         <Text>
                           <Entypo name="trash" size={24} color="black" />
                         </Text>
@@ -150,5 +150,8 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     fontSize: 16,
+  },
+  textLine: {
+    marginLeft: 50
   }
 })
